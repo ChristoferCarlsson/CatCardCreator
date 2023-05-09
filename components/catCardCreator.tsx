@@ -38,7 +38,7 @@ if (!data) return <div>No data</div>;
 let randomCat:any = data;
 
 const pushNewCat = (event:any) => {
-  let picture:any = document.getElementsByClassName("cardCreatorImage")[0] as HTMLElement;
+  let picture:any = document.getElementById("catPicture") as HTMLElement;
   let name:any = document.getElementById("catName") as HTMLElement;
   picture = picture.src;
   name = name.value;
@@ -63,7 +63,7 @@ const pushNewCat = (event:any) => {
       <div className={styles.catCreator}>
         <label>Name your cat</label>
         <input id="catName" type="text" />
-        <img className={styles.cardCreatorImage} src={randomCat[0].url} alt="" />
+        <img id="catPicture" className={styles.cardCreatorImage} src={randomCat[0].url} alt="" />
         <button
           onClick={() =>
             pushNewCat(event)

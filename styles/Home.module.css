@@ -1,0 +1,211 @@
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+
+.main {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 94%;
+  border: 3px solid #67A498;
+  border-radius: 8px;
+  background-color: #f6fbff;
+}
+
+.description {
+  height: 88px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  height: 88px;
+  display: flex;
+  justify-content: center;
+}
+
+.mainBox {
+  height: calc(100% - 158px);
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.footer {
+  height: 100px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerBox {
+  border: 2px solid #969696;
+  background-color: #e4e8eb;
+
+  border-bottom: none;
+  border-radius: 18px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 89px;
+}
+
+.footerBox>select {
+  height: 30px;
+  width: 140px;
+  font-size: 20px;
+}
+
+.catDisplay {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.catDisplay>div>div {
+  text-align: center;
+  background-color: #e6f0f2;
+  border: 5px solid #6792A4;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: #7d7d7d 0px 0px 5px 1px;
+}
+
+.catCreator {
+  background-color: #e6f0f2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #6792A4;
+  box-shadow: #5e5e5e 0px 0px 5px 1px;
+  border-radius: 10px;
+
+}
+
+.catCreator>button {
+
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0 16px;
+  background-color: #0070d2;
+  border-radius: 0.25rem;
+  border: 1px solid #0070d2;
+  color: #fff;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+
+}
+
+.catCreator>label {
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.catCreator>* {
+  margin: 5px;
+}
+
+
+.catCardPanel {
+  max-width: 200px;
+  width: 100px;
+}
+
+.catCardCreator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.cardCreatorImage {
+  max-width: 200px;
+}
+
+.footerBox {
+  border: 2px solid #969696;
+  background-color: #e4e8eb;
+  border-bottom: none;
+  border-radius: 18px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 89px;
+}
+
+.footerBox>select {
+  height: 30px;
+  width: 140px;
+  font-size: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .mainBox {
+    height: calc(100% - 158px);
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .catDisplay>div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .catDisplay>div>div {
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    max-width: 170px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: #7d7d7d 0px 0px 5px 1px;
+  }
+
+  .catCardCreator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+}

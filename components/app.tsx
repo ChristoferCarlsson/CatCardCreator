@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function App() {
   const [owner, setOwner] = useState(42);
+  const [forceUpdate, setForceUpdate] = useState(false);
   
   const DB_API_URI = "http://localhost:3001";
   const endpoint = `${DB_API_URI}/users/${owner}`;
@@ -29,6 +30,9 @@ export default function App() {
     setOwner(ownerName.target.value);
   }
 
+  const update = () => {
+    setForceUpdate(!forceUpdate);
+  }
   return (
     <>
       <div className={styles.main}>
@@ -39,7 +43,7 @@ export default function App() {
         </div>
         <div className={styles.row + " " + styles.mainBox}>
           <div className={styles.col + " " + styles.catCardCreator}>
-            <CatCardCreator data={data} link={DB_API_URI} owner={owner} />
+            <CatCardCreator update={update} data={data} link={DB_API_URI} owner={owner} />
           </div>
           <div className={styles.row + " " + styles.catDisplay}>
             <div className={styles.col}>

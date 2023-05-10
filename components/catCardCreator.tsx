@@ -56,6 +56,8 @@ const pushNewCat = (event:any) => {
 
   data.herd.push(newCat);
   mutate(data);
+
+  props.update();
 }
 
   return (
